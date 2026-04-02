@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-brand-black font-body text-brand-khaki antialiased;
+  }
+}
+
+@layer utilities {
+  .section-grid-texture {
+    background-image: url("/grid.svg");
+    background-size: 48px 48px;
+    @apply opacity-[0.03];
+  }
+
+  .cursor-crosshair-interactive {
+    cursor: crosshair;
+  }
+
+  .btn-tactical {
+    @apply relative inline-flex items-center justify-center font-mono text-sm font-medium uppercase tracking-wider transition-colors duration-200;
+  }
+
+  .btn-tactical::after {
+    content: "";
+    @apply pointer-events-none absolute bottom-0 left-0 h-0.5 w-0 bg-brand-olive transition-all duration-300 ease-out;
+  }
+
+  .btn-tactical:hover::after,
+  .group:hover .btn-tactical-underline::after {
+    @apply w-full;
+  }
+
+  .btn-tactical-underline::after {
+    content: "";
+    @apply pointer-events-none absolute bottom-0 left-0 h-0.5 w-0 bg-brand-olive transition-all duration-300 ease-out;
+  }
+}
+
+@keyframes blink-cursor {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-blink-cursor {
+  animation: blink-cursor 1s step-end infinite;
+}
