@@ -26,9 +26,9 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Spekt Tactical | NATO-Aligned Tactical Equipment",
+  title: "TacAID | NATO-Aligned Field System",
   description:
-    "Professional tactical equipment. NATO-standard quality. B2B procurement with full documentation.",
+    "TacAID — one flagship field system. STANAG-aligned documentation, B2B procurement, Nordic supply chain.",
 };
 
 export default function RootLayout({

@@ -30,11 +30,11 @@ const steps = [
   },
   {
     key: "mission" as const,
-    title: "Mission type",
+    title: "Mission profile",
     options: [
-      { id: "patrol" as Mission, label: "Foot patrol / load carriage" },
-      { id: "comms" as Mission, label: "Comms & headsets" },
-      { id: "protection" as Mission, label: "Ballistic / eye / gloves" },
+      { id: "patrol" as Mission, label: "Dismounted / extended patrol" },
+      { id: "comms" as Mission, label: "Command & network node" },
+      { id: "protection" as Mission, label: "Force protection detail" },
     ],
   },
 ];
@@ -47,25 +47,7 @@ export function KitQuiz() {
 
   const recommendation = useMemo(() => {
     if (!role || !climate || !mission) return null;
-    const ids = new Set<string>();
-    if (mission === "patrol") {
-      ids.add("spk-0042");
-      ids.add("spk-0118");
-    }
-    if (mission === "comms") {
-      ids.add("spk-0204");
-    }
-    if (mission === "protection") {
-      ids.add("spk-0407");
-      ids.add("spk-0331");
-    }
-    if (climate === "arctic") {
-      ids.add("spk-0522");
-    }
-    if (ids.size === 0) {
-      ids.add(products[0].id);
-    }
-    return products.filter((p) => ids.has(p.id));
+    return products;
   }, [role, climate, mission]);
 
   function select(
@@ -89,6 +71,7 @@ export function KitQuiz() {
 
   return (
     <section
+      id="mission-fit"
       className="relative overflow-hidden border-t border-brand-steel bg-brand-black py-16 sm:py-20"
       aria-labelledby="kit-quiz-heading"
     >
@@ -102,12 +85,12 @@ export function KitQuiz() {
             id="kit-quiz-heading"
             className="font-heading text-3xl font-bold uppercase tracking-widest text-brand-white sm:text-4xl"
           >
-            Find your kit
+            Mission fit
           </h2>
           <span className="mt-3 block h-0.5 w-16 bg-brand-olive" />
           <p className="mt-6 font-body text-base leading-relaxed text-brand-khaki">
-            Three inputs. Recommended bundle based on role, climate, and
-            mission. No account required.
+            Three inputs describe your operating context. TacAID is the sole
+            stocked line — this flow records how you plan to employ it.
           </p>
 
           {step < steps.length && current && (
@@ -133,7 +116,11 @@ export function KitQuiz() {
           {step >= steps.length && recommendation && (
             <div className="mt-10 rounded-sm border border-brand-steel bg-brand-charcoal p-6">
               <p className="font-mono text-xs uppercase tracking-widest text-brand-olive">
-                Recommended bundle
+                Your context maps to TacAID
+              </p>
+              <p className="mt-3 font-body text-sm text-brand-khaki">
+                Include these answers in your quote request for faster technical
+                review.
               </p>
               <ul className="mt-4 space-y-3">
                 {recommendation.map((p) => (

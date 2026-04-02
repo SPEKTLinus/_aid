@@ -40,15 +40,14 @@ export function FeaturedProducts() {
       />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <SectionTitle id="equipment-heading">
-            Field-tested equipment
-          </SectionTitle>
+          <SectionTitle id="equipment-heading">TacAID</SectionTitle>
           <p className="mt-8 max-w-xl font-body text-base leading-relaxed text-brand-khaki">
-            Every item meets or exceeds NATO STANAG procurement standards.
+            One system. Baseline held to NATO STANAG documentation requirements.
+            Quotes and lot data ship with the order.
           </p>
         </div>
 
-        <ul className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mx-auto mt-14 grid max-w-xl grid-cols-1 gap-6">
           {products.map((p) => (
             <li key={p.id}>
               <motion.article

@@ -53,7 +53,8 @@ export function Hero() {
           transition={{ delay: 0.5 }}
           className="mx-auto mt-6 max-w-xl font-body text-base leading-relaxed text-brand-khaki"
         >
-          Professional tactical equipment. NATO-standard quality. Available to
+          TacAID is built for units that need a single, auditable field system —
+          NATO-aligned documentation, Nordic supply chain controls, access for
           certified organizations and vetted individuals.
         </motion.p>
 
@@ -67,7 +68,7 @@ export function Hero() {
             href="#equipment"
             className="btn-tactical cursor-crosshair-interactive rounded-sm bg-brand-alert px-8 py-4 font-mono text-sm text-brand-white hover:bg-brand-alert/90"
           >
-            Shop equipment
+            View TacAID
           </Link>
           <Link
             href="#procurement"

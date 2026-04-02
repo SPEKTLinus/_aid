@@ -14,11 +14,11 @@ export function Footer() {
             <Link href="#hero" className="flex cursor-crosshair-interactive items-center gap-2">
               <Image src="/logo.svg" alt="" width={32} height={32} />
               <span className="font-heading text-lg font-bold uppercase tracking-tight text-brand-white">
-                Spekt Tactical
+                TacAID
               </span>
             </Link>
             <p className="mt-4 font-body text-sm leading-relaxed text-brand-khaki">
-              NATO-aligned procurement. Documented quality. Nordic supply
+              Single product line. NATO-aligned documentation. Nordic supply
               chain discipline.
             </p>
             <div className="mt-6 flex gap-3">
@@ -54,27 +54,22 @@ export function Footer() {
           </div>
           <div>
             <h3 className="font-mono text-xs uppercase tracking-widest text-brand-white">
-              Equipment
+              Product
             </h3>
             <ul className="mt-4 space-y-2 font-body text-sm text-brand-khaki">
               <li>
-                <Link href="#categories" className="cursor-crosshair-interactive hover:text-brand-white">
-                  Load bearing
+                <Link href="#equipment" className="cursor-crosshair-interactive hover:text-brand-white">
+                  TacAID — specs &amp; pricing
                 </Link>
               </li>
               <li>
-                <Link href="#categories" className="cursor-crosshair-interactive hover:text-brand-white">
-                  Protective gear
+                <Link href="#product" className="cursor-crosshair-interactive hover:text-brand-white">
+                  Overview
                 </Link>
               </li>
               <li>
-                <Link href="#categories" className="cursor-crosshair-interactive hover:text-brand-white">
-                  Communications
-                </Link>
-              </li>
-              <li>
-                <Link href="#categories" className="cursor-crosshair-interactive hover:text-brand-white">
-                  Field clothing
+                <Link href="#campaign" className="cursor-crosshair-interactive hover:text-brand-white">
+                  Cold-weather operations
                 </Link>
               </li>
             </ul>
@@ -136,7 +131,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-3 border-t border-brand-steel pt-8 font-mono text-[10px] uppercase tracking-wider text-brand-fog sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Spekt Tactical AB</p>
+          <p>© {new Date().getFullYear()} TacAID AB</p>
           <p>Org nr: SE556XXXXXXX-XXXX</p>
           <p>NATO supplier code: NCAGE XXXXX</p>
           <p className="flex items-center gap-2">

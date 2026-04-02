@@ -27,7 +27,7 @@ export function CampaignBanner() {
       <SectionReveal className="relative z-10 mx-auto flex min-h-[24rem] max-w-7xl items-center px-4 py-16 sm:min-h-[28rem] sm:px-6 lg:px-8">
         <div className="max-w-lg">
           <p className="font-mono text-xs uppercase tracking-widest text-brand-white/90">
-            Winter collection 2026
+            TacAID · cold-weather baseline
           </p>
           <h2
             id="campaign-heading"
@@ -36,13 +36,14 @@ export function CampaignBanner() {
             Arctic warfare ready
           </h2>
           <p className="mt-4 font-body text-base leading-relaxed text-brand-khaki">
-            Cold-weather systems designed for Nordic climate operations.
+            TacAID is validated for Nordic winter employment. Environmental data
+            ships in the procurement pack.
           </p>
           <Link
             href="#equipment"
             className="btn-tactical mt-8 inline-flex cursor-crosshair-interactive rounded-sm bg-brand-alert px-8 py-4 font-mono text-sm text-brand-white hover:bg-brand-alert/90"
           >
-            Explore collection
+            View TacAID
           </Link>
         </div>
       </SectionReveal>

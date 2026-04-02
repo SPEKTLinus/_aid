@@ -14,10 +14,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const links = [
-  { label: "Equipment", href: "#equipment" },
-  { label: "Apparel", href: "#categories" },
-  { label: "Systems", href: "#campaign" },
-  { label: "Certifications", href: "#procurement" },
+  { label: "Product", href: "#equipment" },
+  { label: "Overview", href: "#product" },
+  { label: "Winter", href: "#campaign" },
+  { label: "Procurement", href: "#procurement" },
   { label: "About", href: "#about" },
 ] as const;
 
@@ -62,13 +62,12 @@ export function Navigation() {
               className="shrink-0"
             />
             <div className="flex items-center gap-1.5 font-heading text-lg font-bold uppercase tracking-tight text-brand-white sm:text-xl">
-              <span>Spekt</span>
+              <span>TacAID</span>
               <Shield
                 className="h-5 w-5 shrink-0 text-brand-olive"
                 strokeWidth={1.75}
                 aria-hidden
               />
-              <span>Tactical</span>
             </div>
           </Link>
 
